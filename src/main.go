@@ -15,6 +15,7 @@ func main() {
 	nombre := "Platzi"
 	cursos := 500
 	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
+	//pole solo %v cuando no sepas el tipo de dato
 	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
 
 	// Sprintf
