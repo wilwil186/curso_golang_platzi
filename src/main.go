@@ -2,37 +2,27 @@ package main
 
 import "fmt"
 
-func main() { //ejercicio Area de un cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-	fmt.Println(areaCuadrado)
+func main() { //ciclo tarea repetitiva
 
-	x := 10
-	y := 58
+	//For condicional
+	for i := 0; i <= 10; i++ {
+		fmt.Println(i)
+	}
 
-	//suma
-	result := x + y
-	fmt.Println("Suma:", result)
+	// For While
+	counter := 0
+	for counter < 10 {
+		fmt.Println(counter)
+		counter++
+	}
 
-	//Resta
-	result = y - x
-	fmt.Println("Resta:", result)
-
-	//multiplicación
-	result = x * y
-	//División
-	result = y / x
-	fmt.Println("División:", result)
-	//modulo
-	result = y % x
-	fmt.Println("Modulo:", result)
-	//Incremental
-	x++
-	fmt.Println("Incremental:", x)
-	//Decremental}
-	x--
-	fmt.Println("Decremental:", x)
-
+	//For forever
+	counteForever := 0
+	for {
+		fmt.Println(counteForever)
+		counteForever++
+	}
 }
 
+//en go solo existe el ciclo for
 //para comentar
