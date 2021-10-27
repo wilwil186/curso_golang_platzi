@@ -2,25 +2,22 @@ package main
 
 import "fmt"
 
-func main() { //ciclo tarea repetitiva
-
-	//For condicional
-	for i := 0; i <= 10; i++ {
-		fmt.Println(i)
+func main() {
+	valor1 := 1
+	valor2 := 2
+	if valor1 == 1 {
+		fmt.Println("Es 1")
+	} else {
+		fmt.Println("No es 1")
 	}
 
-	// For While
-	counter := 0
-	for counter < 10 {
-		fmt.Println(counter)
-		counter++
+	// With and
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("es verdad")
 	}
-
-	//For forever
-	counteForever := 0
-	for {
-		fmt.Println(counteForever)
-		counteForever++
+	// With or
+	if valor1 == 0 || valor2 == 2 {
+		fmt.Println("es verdad, oki doki")
 	}
 }
 
