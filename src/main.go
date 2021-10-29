@@ -2,23 +2,18 @@ package main
 
 import "fmt"
 
+type car struct {
+	brand string
+	year  int
+}
+
 func main() {
-	//en muchos lenguajes de progamación existen las estructuras de datos llave valor
-	//para acceder a un valor necesitas una llave
-	//en python son diccionario y en go maps
-	m := make(map[string]int)
+	myCar := car{brand: "Ford", year: 2020}
+	fmt.Println(myCar)
 
-	m["Jose"] = 14
-	m["Pepito"] = 20
+	// Otra manera
+	var otherCar car
+	otherCar.brand = "Ferrari"
+	fmt.Println(otherCar)
 
-	fmt.Println(m)
-
-	// Recorrer map
-	for i, v := range m {
-		fmt.Println(i, v)
-	}
-
-	// Encontrar valor
-	value, ok := m["Jose"]
-	fmt.Println(value, ok)
 }
