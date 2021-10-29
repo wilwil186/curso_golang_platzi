@@ -1,36 +1,24 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-func isPalindromo(text string) {
-	var textReverse string
-
-	// Convert text to lower
-	text = strings.ToLower(text)
-	text = strings.ToLower(text)
-
-	for i := len(text) - 1; i >= 0; i-- {
-		textReverse += string(text[i])
-	}
-
-	if text == textReverse {
-		fmt.Println("Es palindromo")
-	} else {
-		fmt.Println("No es un palíndromo")
-	}
-}
+import "fmt"
 
 func main() {
-	slice := []string{"hola", "que", "hace"}
+	//en muchos lenguajes de progamación existen las estructuras de datos llave valor
+	//para acceder a un valor necesitas una llave
+	//en python son diccionario y en go maps
+	m := make(map[string]int)
 
-	for i := range slice {
-		fmt.Println(i)
+	m["Jose"] = 14
+	m["Pepito"] = 20
+
+	fmt.Println(m)
+
+	// Recorrer map
+	for i, v := range m {
+		fmt.Println(i, v)
 	}
-	// ama
-	// amor a roma
 
-	isPalindromo("Ama")
+	// Encontrar valor
+	value, ok := m["Jose"]
+	fmt.Println(value, ok)
 }
