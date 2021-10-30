@@ -2,37 +2,46 @@ package main
 
 import "fmt"
 
-func main() { //ejercicio Area de un cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-	fmt.Println(areaCuadrado)
+type pc struct {
+	ram   int
+	disk  int
+	brand string
+}
 
-	x := 10
-	y := 58
+func (myPC pc) ping() {
+	fmt.Println(myPC.brand, "Pong")
+}
 
-	//suma
-	result := x + y
-	fmt.Println("Suma:", result)
-
-	//Resta
-	result = y - x
-	fmt.Println("Resta:", result)
-
-	//multiplicación
-	result = x * y
-	//División
-	result = y / x
-	fmt.Println("División:", result)
-	//modulo
-	result = y % x
-	fmt.Println("Modulo:", result)
-	//Incremental
-	x++
-	fmt.Println("Incremental:", x)
-	//Decremental}
-	x--
-	fmt.Println("Decremental:", x)
+func (myPC *pc) duplicateRAM() {
+	myPC.ram = myPC.ram * 2
 
 }
 
-//para comentar
+func main() {
+
+	a := 50
+	b := &a
+
+	fmt.Println(b)
+	// el * es la operación contraria de &
+	fmt.Println(*b)
+
+	*b = 100
+	fmt.Println(a)
+
+	//instanciar
+	myPC := pc{ram: 16, disk: 200, brand: "msi"}
+	fmt.Println(myPC)
+	//retornar un mensaje aletorio
+	myPC.ping()
+	//estado actual
+	fmt.Println(myPC)
+	//suplicar
+	myPC.duplicateRAM()
+
+	fmt.Println(myPC)
+	myPC.duplicateRAM()
+
+	fmt.Println(myPC)
+
+}
