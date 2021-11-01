@@ -18,7 +18,7 @@ func main() {
 
 	fmt.Println("Hello")
 	wg.Add(1)
-
+	//para caplicar las gorutines
 	go say("world", &wg)
 
 	wg.Wait()
