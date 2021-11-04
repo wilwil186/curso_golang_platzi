@@ -12,6 +12,8 @@ func main() {
 	c <- "Mensaje2"
 
 	fmt.Println(len(c), cap(c))
+	// len nos dice cuantas gortutines hay en el chanel
+	// cap nos dice la cantidad maxima que puede almacenar ese chanel
 
 	// Range y close
 	close(c)
